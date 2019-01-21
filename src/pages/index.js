@@ -5,8 +5,6 @@ import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { TimelineMax, Power1 } from 'gsap'
 
 
-
-
 import Layout from '../components/layout'
 import Image from '../components/image'
 import SEO from '../components/seo'
