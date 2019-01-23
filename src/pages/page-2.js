@@ -4,7 +4,7 @@ import TransitionLink, { TransitionPortal } from 'gatsby-plugin-transition-link'
 import { TimelineMax, Power1 } from 'gsap'
 
 
-import Layout from '../components/layout'
+import Layout from '../components/layout/layout'
 import SEO from '../components/seo'
 
 class SecondPage extends Component {

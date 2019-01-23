@@ -1,0 +1,12 @@
+.headerSvg {
+    position: relative;
+    top: calc(50% - 140px);
+    // left: calc(50% - 271px);
+    left: calc(50% - 263px);
+}
+
+@media only screen and (max-width: 900px) {
+    .headerSvg {
+        display: none;
+    }
+}

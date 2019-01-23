@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import TransitionLink, { TransitionPortal } from 'gatsby-plugin-transition-link'
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+// import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { TimelineMax, Power1 } from 'gsap'
 
-
-import Layout from '../components/layout'
-import Image from '../components/image'
+import Header from '../components/header/header'
+import Layout from '../components/layout/layout'
+// import Image from '../components/image'
 import SEO from '../components/seo'
+import AboutSection from '../components/home/about-section'
 
 class IndexPage extends Component {
 
@@ -56,32 +57,8 @@ class IndexPage extends Component {
       <Layout>
         <section ref={n => (this.layoutContents = n)}>
           <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-          <h1>Hi peopleee</h1>
-          <p>Welcome to your new Gatsbyy site.</p>
-          <p>Now go build something great.</p>
-          <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-            <Image />
-          </div>
-          <TransitionLink
-                to="/page-2/"
-                exit={{
-                  length: 1,
-                  trigger: ({ exit }) => {
-                    this.verticalAnimation(exit, 'up');
-
-                  },
-                  state: { test: 'exit state' }
-                }}
-                entry={{
-                  delay: 0.5,
-                  trigger: ({ entry, node }) => this.test(entry, node),
-                }}
-              >
-                Go to page 2
-          </TransitionLink>
-          <AniLink cover direction="up" duration={1} to="page-2" bg="rebeccapurple">
-                Go to Page 4
-          </AniLink>
+          <Header />
+          <AboutSection />
         </section>
         <TransitionPortal>
               <div
@@ -104,6 +81,23 @@ class IndexPage extends Component {
   }
 }
 
+// <TransitionLink
+//                 to="/page-2/"
+//                 exit={{
+//                   length: 1,
+//                   trigger: ({ exit }) => {
+//                     this.verticalAnimation(exit, 'up');
+
+//                   },
+//                   state: { test: 'exit state' }
+//                 }}
+//                 entry={{
+//                   delay: 0.5,
+//                   trigger: ({ entry, node }) => this.test(entry, node),
+//                 }}
+//               >
+//                 Go to page 2
+//           </TransitionLink>
 
 
 export default IndexPage
