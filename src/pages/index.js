@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
-// import { Link } from 'gatsby'
 import TransitionLink, { TransitionPortal } from 'gatsby-plugin-transition-link'
-// import AniLink from "gatsby-plugin-transition-link/AniLink"
 import { TimelineMax, Power1 } from 'gsap'
 
 import Header from '../components/header/header'
 import Layout from '../components/layout/layout'
-// import Image from '../components/image'
 import SEO from '../components/seo'
 import AboutSection from '../components/home/about-section'
+import SkillsSection from '../components/home/skills-section'
+import WorksSection from '../components/home/works-section'
 
 class IndexPage extends Component {
 
@@ -59,6 +58,8 @@ class IndexPage extends Component {
           <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
           <Header />
           <AboutSection />
+          <SkillsSection />
+          <WorksSection />
         </section>
         <TransitionPortal>
               <div

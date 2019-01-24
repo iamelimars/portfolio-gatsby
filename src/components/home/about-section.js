@@ -8,8 +8,6 @@ import Img from 'gatsby-image'
 
 
 const aboutSection = (props) => {
-    console.log(props);
-
     return (
         <StaticQuery
             query={graphql`
@@ -41,7 +39,7 @@ const aboutSection = (props) => {
                 <section style={styles.container}>
                     <div style={styles.header}>
                         <h1 style={styles.headerTitle}>About<span style={styles.headerSpan}>.</span></h1>
-                        <p style={styles.headerContent}>An overview of myself</p>
+                        <p style={styles.headerContent}>Hi. I design and develop elegant, performant and accessible software</p>
                     </div>
                     <div style={styles.sectionContainer}>
                         <h1 style={styles.sectionTitle}>Front End Development<span style={styles.sectionTitleSpan}>.</span> </h1>
