@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 import NavBar from '../common/navbar/navbar'
-
+import Footer from '../footer/footer'
 
 import Header from '../header/header'
 import './layout.css'
@@ -31,6 +31,7 @@ const Layout = ({ children }) => (
         >
           <NavBar />
           {children}
+          <Footer />
           {/* <footer>
             © {new Date().getFullYear()}, Built with
             {` `}

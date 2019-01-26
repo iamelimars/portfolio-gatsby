@@ -8,6 +8,8 @@ import SEO from '../components/seo'
 import AboutSection from '../components/home/about-section'
 import SkillsSection from '../components/home/skills-section'
 import WorksSection from '../components/home/works-section'
+import TutorialsSection from '../components/home/tutorials-section'
+import ContactSection from '../components/home/contact-section'
 
 class IndexPage extends Component {
 
@@ -54,13 +56,15 @@ class IndexPage extends Component {
   render() {
     return (
       <Layout>
-        <section ref={n => (this.layoutContents = n)}>
+        <div ref={n => (this.layoutContents = n)}>
           <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
           <Header />
           <AboutSection />
           <SkillsSection />
           <WorksSection />
-        </section>
+          <TutorialsSection />
+          <ContactSection />
+        </div>
         <TransitionPortal>
               <div
                 ref={n => (this.transitionCover = n)}
