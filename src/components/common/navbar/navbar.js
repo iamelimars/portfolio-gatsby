@@ -15,6 +15,10 @@ const navItem = {
     color: '#272E3F'
 }
 
+const scrollAbout = () => {
+    
+}
+
 const navbar = () => (
         <div style={topNav} className="top-nav">
             <AniLink style={navItem} className="nav-item" cover direction="up" duration={1} to="" bg="#FF5354">
@@ -37,3 +41,6 @@ const navbar = () => (
 
 export default navbar
 
+{/* <a style={navItem} href="javascript:;" onClick={scrollToAbout} className="nav-item" >
+About
+</a> */}

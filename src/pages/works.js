@@ -1,11 +1,14 @@
 import React, {Component} from 'react'
 import Layout from '../components/layout/layout'
+import Works from '../components/home/works-section'
 
 
 class works extends Component {
     render() {
         return (
-            <Layout>works page</Layout>
+            <Layout>
+                <Works />
+            </Layout>
         )
     }
 }

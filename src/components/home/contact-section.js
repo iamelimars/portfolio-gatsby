@@ -1,10 +1,38 @@
 import React from 'react'
+import Fade from 'react-reveal/Fade'
+import anime from 'animejs'
+
+
+const animation = () => {
+    console.log('another test animation');
+
+    var tl = anime.timeline({
+        easing: 'easeInOutQuart',
+    });
+
+    tl
+        .add({
+            targets: '.contact-container',
+            width: '50%',
+            opacity: [0, 1],
+            easing: 'easeInOutQuart',
+            duration: 800,
+        }, 300)
+        .add({
+            targets: '.contact-info',
+            opacity: [0, 1],
+            easing: 'easeInOutQuart',
+            duration: 800,
+        }, 800)
+    
+}
 
 const contactSection = () => (
     <section >
-        <div style={styles.container}>
-            <h1 style={styles.title}>Send me an email if you want <br/> to get in contact.</h1>
-            <a id="email-btn" style={styles.button} href="mailto:elimarshall@gmail.com">
+        <div className="contact-container" style={styles.container}>
+            <Fade onReveal={animation}></Fade>
+            <h1 className="contact-info" style={styles.title}>Send me an email if you want <br/> to get in contact.</h1>
+            <a className="contact-info" id="email-btn" style={styles.button} href="mailto:elimarshall@gmail.com">
                 elimarshall@gmail.com
             </a>
         </div>
@@ -16,8 +44,9 @@ export default contactSection
 const styles = {
     container: {
         backgroundColor: '#FF5851',
-        width: '50%',
-        margin: '100px 0 100px auto',
+        opacity: [0, 1],
+        width: '0%',
+        margin: '300px 0 100px auto',
         display: 'flex',
         justifyContent: 'flex-end',
         alignItems: 'flex-end',

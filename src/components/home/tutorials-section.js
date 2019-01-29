@@ -1,10 +1,37 @@
 import React from 'react'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import Fade from 'react-reveal/Fade'
+import anime from 'animejs'
+
+const animation = () => {
+    console.log('another test animation');
+
+    var tl = anime.timeline({
+        easing: 'easeInOutQuart',
+    });
+
+    tl
+        .add({
+            targets: '.tuts-container',
+            width: '50%',
+            opacity: [0, 1],
+            easing: 'easeInOutQuart',
+            duration: 800,
+        }, 300)
+        .add({
+            targets: '.tuts-info',
+            opacity: [0, 1],
+            easing: 'easeInOutQuart',
+            duration: 800,
+        }, 800)
+    
+}
 
 const tutorialsSection = () => (
-    <section style={styles.container}>
-        <h1 style={styles.title}>Courses, Tutorials & <br/> Blog posts</h1>
-        <AniLink style={styles.button} cover direction="up" duration={1} to="tutorials" bg="#FF5354">
+    <section className="tuts-container" style={styles.container}>
+        <Fade onReveal={animation}></Fade>
+        <h1 className="tuts-info" style={styles.title}>Courses, Tutorials & <br/> Blog posts</h1>
+        <AniLink className="tuts-info" style={styles.button} cover direction="up" duration={1} to="tutorials" bg="#FF5354">
             Explore
         </AniLink>
     </section>
@@ -15,8 +42,9 @@ export default tutorialsSection
 const styles = {
     container: {
         backgroundColor: '#4AAADC',
-        width: '50%',
-        margin: '60px 0',
+        opacity: '0',
+        width: '0%',
+        margin: '300px 0 60px 0',
         display: 'flex',
         justifyContent: 'space-evenly',
         alignItems: 'flex-end',
