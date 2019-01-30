@@ -1,7 +1,7 @@
 import React from 'react'
 
 const tutorialWrapper = ({ data }) => {
-    console.log(data);
+    // console.log(data);
 
     return (
         <div style={styles.container}>
