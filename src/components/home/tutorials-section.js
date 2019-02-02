@@ -31,7 +31,7 @@ const tutorialsSection = () => (
     <section className="tuts-container" style={styles.container}>
         <Fade onReveal={animation}></Fade>
         <h1 className="tuts-info" style={styles.title}>Courses, Tutorials & <br/> Blog posts</h1>
-        <AniLink className="tuts-info" style={styles.button} cover direction="up" duration={1} to="tutorials" bg="#FF5354">
+        <AniLink className="tuts-info" style={styles.button} cover direction="up" duration={1} to="blog" bg="#FF5354">
             Explore
         </AniLink>
     </section>

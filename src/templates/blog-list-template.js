@@ -7,6 +7,8 @@ export default class BlogList extends Component {
 
     render() {
         const posts = this.props.data.allPrismicPost.edges
+        console.log(posts);
+        
         const { currentPage, numPages } = this.props.pageContext
         const isFirst = currentPage === 1
         const isLast = currentPage === numPages
@@ -50,8 +52,22 @@ export const blogListQuery = graphql`
                     data {
                         title {
                             text
+                          	raw {
+                              text
+                            }
+                            html
                         }
-                        date(formatString: "MM.DD.YYY")
+                        categories {
+                            category {
+                              document {
+                                data {
+                                  name
+                                }
+                              }
+                            }
+                          }
+                        description
+                        date(formatString: "MM.DD.YYYY")
                         header_image {
                             url
                         }
@@ -83,7 +99,7 @@ let styles = {
         pointerEvents: 'none',
         cursor: 'default',
         textDecoration: 'none',
-        backgroundColor: 'grey',
+        backgroundColor: 'gray',
         border: 'none',
         borderRadius: '20px',
         padding: '10px 35px',

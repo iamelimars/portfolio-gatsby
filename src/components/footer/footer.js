@@ -33,7 +33,7 @@ const footer = () => (
             <AniLink style={styles.navItem}  cover direction="right" duration={1} to="works" bg="#FF5354">
                 Works
             </AniLink>
-            <AniLink style={styles.navItem}  cover direction="left" duration={1} to="tutorials" bg="#272E40">
+            <AniLink style={styles.navItem}  cover direction="left" duration={1} to="blog" bg="#272E40">
                 Tutorials
             </AniLink>
             <AniLink style={styles.navItem}  cover direction="down" duration={1} to="contact" bg="#272E40">

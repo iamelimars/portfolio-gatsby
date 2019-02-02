@@ -38,7 +38,7 @@ exports.createPages = async ({ graphql, actions }) => {
     if (!error) {
         const postsList = result.data.allPrismicPost.edges
 
-        const postsPerPage = 9
+        const postsPerPage = 12
         const numPages = Math.ceil(postsList.length / postsPerPage)
 
         Array.from({ length: numPages }).forEach((_, i) => {
