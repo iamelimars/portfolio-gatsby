@@ -2,70 +2,68 @@ import React from 'react'
 import { Link } from 'gatsby'
 import './tutorial-wrapper.scss'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
+import Grid from '@material-ui/core/Grid';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
+import { withStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
 
-
-const tutorialWrapper = ({ data }) => {
-    // console.log(data);
-
-    return (
-        <div className="container" style={styles.container}>
-            <h1>Latest Tutorials</h1>
-            <div style={styles.wrapper}>
-                {data.map(tutorial =>
-                    <AniLink key={tutorial.node.uid} className="card-link" to={`/post/${tutorial.node.uid}`} cover direction="up" duration={1} bg="#FF5354">
-                        <div className="card" style={styles.item} >
-                            <img width="100%" src={tutorial.node.data.header_image.url} alt="" />
-                            <div className="card-info">
-                                <h4>{tutorial.node.data.title.text}</h4>
-                                <h5>{tutorial.node.data.date}</h5>
-                                {/* {tutorial.node.categories.map(category => 
-                                <div>
-                                    {category.category === null ?
-                                        <h1>test</h1>
-                                    :
-                                        <h1>testttt</h1>
-                                    }
-                                    </div>
-                                    )} */}
-
-                                <p>{tutorial.node.data.description}</p>
-                            </div>
-                            {/* <div dangerouslySetInnerHTML={{ __html: tutorial.node.data.title.text }} /> */}
-                        </div>
-                    </AniLink>
-                )}
-            </div>
-        </div>
-    )
-}
-
-
-export default tutorialWrapper
-
-let styles = {
+let style = {
     container: {
         maxWidth: '1100px',
         margin: '150px auto',
         minHeight: '50vh',
         padding: '20px'
     },
-    wrapper: {
-        marginTop: '30px',
-        display: 'grid',
-        // gridTemplateColumns: '30% 30% 30%',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-        justifyContent: 'center',
-        gridGap: '30px'
-
+    card: {
+        '&:hover': {
+            boxShadow: '0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)',
+            transition: 'all 0.5s cubic-bezier(.25,.8,.25,1)',
+            backgroundColor:'white'
+        }
     },
-    item: {
-        // justifySelf: 'center'
+    media: {
+        height: 140,
     },
-    img: {
-        // objectFit: 'cover',
-
-    }
-
-
 
 }
+
+
+const tutorialWrapper = ({ data, classes }) => {
+    // const { classes } = props;
+    console.log(classes);
+
+    return (
+        <div className="container" className={classes.container}>
+            <h1>Latest Tutorials</h1>
+            <Grid container spacing={40}>
+                {data.map(tutorial =>
+                    <Grid item xs={12} sm={6} md={4} lg={3} >
+                        <AniLink key={tutorial.node.uid} className="card-link" to={`/post/${tutorial.node.uid}`} cover direction="up" duration={1} bg="#FF5354">
+                            <Card className={classes.card}>
+                                    <CardMedia
+                                        className={classes.media}
+                                        image={tutorial.node.data.header_image.url}
+                                        title={tutorial.node.data.title.text} />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h6" component="h4">{tutorial.node.data.title.text}</Typography>
+                                        <Typography component="p">{tutorial.node.data.description}</Typography>
+                                    </CardContent>
+                            </Card>
+                        </AniLink>
+                    </Grid>
+
+                )}
+            </Grid>
+        </div>
+    )
+}
+
+tutorialWrapper.PropTypes = {
+    classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(style)(tutorialWrapper)
+
