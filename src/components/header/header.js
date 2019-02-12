@@ -41,7 +41,7 @@ componentDidMount() {
         .add({
             targets: '.nav-item',
             opacity: [0, 1],
-            translateY: '-20px',
+            translateY: '10px',
             easing: 'easeInOutQuart',
             duration: 1000,
             delay: anime.stagger(100)

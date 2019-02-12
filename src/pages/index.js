@@ -10,6 +10,8 @@ import SkillsSection from '../components/home/skills-section'
 import WorksSection from '../components/home/works-section'
 import TutorialsSection from '../components/home/tutorials-section'
 import ContactSection from '../components/home/contact-section'
+import 'bootstrap/dist/css/bootstrap.css'
+
 
 class IndexPage extends Component {
 
