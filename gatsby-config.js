@@ -2,6 +2,9 @@ require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
+const prismicHtmlSerializer = require('./src/serializer/htmlSerializer')
+
+
 module.exports = {
   siteMetadata: {
     title: `EliTheRobot`,
@@ -25,6 +28,8 @@ module.exports = {
         repositoryName: `eli-portfolio`,
         accessToken: `${process.env.API_KEY}`,
         linkResolver: ({ node, key, value }) => post => `/${post.uid}`,
+        // PrismJS highlighting for labels and slices
+        htmlSerializer: () => prismicHtmlSerializer,
       },
     },
     `gatsby-transformer-sharp`,
