@@ -105,7 +105,8 @@ let styles = {
         padding: '50px 0'
     },
     header: {
-        padding: '30px 80px'
+        padding: '30px 80px',
+        marginBottom: '150px'
     },
     headerTitle: {
         color: '#FF5851',
@@ -137,7 +138,7 @@ let styles = {
         width: '250px',
         textAlign: 'right',
         color: '#4AAADC',
-        marginTop: '-50px',
+        marginTop: '-100px',
         marginRight: '20px',
         lineHeight: '50px'
     },

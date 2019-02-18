@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
 import TransitionLink, { TransitionPortal } from 'gatsby-plugin-transition-link'
 import { TimelineMax, Power1 } from 'gsap'
-
 
 import Layout from '../components/layout/layout'
 import SEO from '../components/seo'
@@ -13,7 +11,6 @@ class SecondPage extends Component {
     super(props)
 
     this.verticalAnimation = this.verticalAnimation.bind(this)
-
     this.layoutContents = React.createRef()
     this.transitionCover = React.createRef()
     this.secondTransitionCover = React.createRef()

@@ -1,45 +1,14 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout/layout'
-import  prism  from '../styles/prism'
-import styled from '@emotion/styled'
+
 import  SliceZone  from '../components/SliceZone'
 import Img from 'gatsby-image'
 import { DiscussionEmbed } from "disqus-react";
 
 
-
-
-
-const Content = styled.div`
-  ${prism};
-  padding: 6rem 0;
-  p,
-  li {
-    letter-spacing: -0.003em;
-    --baseline-multiplier: 0.179;
-    --x-height-multiplier: 0.35;
-    font-size: 21px;
-    line-height: 1.58;
-    code {
-      padding: 0.2rem 0.5rem;
-      margin: 0.5rem 0;
-    }
-  }
-  blockquote {
-    margin-left: 0;
-    padding-left: 1.45rem;
-    border-left: 2px solid grey;
-    p {
-      font-size: 19px;
-      font-style: italic;
-    }
-  }
-`
-
 const Post = ({ data: { prismicPost, posts }, location }) => {
     const { data, id } = prismicPost
-    console.log(data);
     const disqusShortname = "elimarshall";
     const disqusConfig = {
       identifier: id,

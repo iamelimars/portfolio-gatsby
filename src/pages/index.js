@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import TransitionLink, { TransitionPortal } from 'gatsby-plugin-transition-link'
+import { TransitionPortal } from 'gatsby-plugin-transition-link'
 import { TimelineMax, Power1 } from 'gsap'
 
 import Header from '../components/header/header'
@@ -87,24 +87,6 @@ class IndexPage extends Component {
     )
   }
 }
-
-// <TransitionLink
-//                 to="/page-2/"
-//                 exit={{
-//                   length: 1,
-//                   trigger: ({ exit }) => {
-//                     this.verticalAnimation(exit, 'up');
-
-//                   },
-//                   state: { test: 'exit state' }
-//                 }}
-//                 entry={{
-//                   delay: 0.5,
-//                   trigger: ({ entry, node }) => this.test(entry, node),
-//                 }}
-//               >
-//                 Go to page 2
-//           </TransitionLink>
 
 
 export default IndexPage

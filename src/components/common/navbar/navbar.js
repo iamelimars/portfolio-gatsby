@@ -1,26 +1,14 @@
 import React, { Component } from 'react'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import './navbar.scss'
-// import Navbar from 'react-bootstrap/Navbar'
-// import Nav from 'react-bootstrap/Nav'
-import {NavDropdown} from 'react-bootstrap'
 import {  HamburgerSpinReverse } from 'react-animated-burgers'
 
 import {
     Collapse,
     Navbar,
-    NavbarToggler,
     NavbarBrand,
     Nav, } from 'reactstrap';
 
-
-
-const topNav = {
-    top: '30px',
-    right: '40px',
-    position: 'absolute',
-    zIndex: '2'
-}
 
 const navItem = {
     padding: '15px',
@@ -46,8 +34,6 @@ class navbar extends Component {
       }
 
     menuClicked = () => {
-        console.log('clocked');
-
         let mainNav = document.getElementById("js-menu");
         mainNav.classList.toggle("active");
     }

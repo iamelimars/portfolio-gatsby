@@ -117,7 +117,7 @@ componentDidMount() {
                     </g>
                 </svg>
 
-                <a href="/" className="scroll-btn">SCROLL</a>
+                <p href="/" className="scroll-btn">SCROLL</p>
 
 
             </section>

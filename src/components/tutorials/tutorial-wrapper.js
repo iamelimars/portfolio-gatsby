@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import './tutorial-wrapper.scss'
 import AniLink from "gatsby-plugin-transition-link/AniLink"
 import Grid from '@material-ui/core/Grid';
@@ -8,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 
 let style = {
     container: {
@@ -36,15 +35,13 @@ let style = {
 
 
 const tutorialWrapper = ({ data, classes }) => {
-    // const { classes } = props;
-    console.log(classes);
 
     return (
-        <div className="container" className={classes.container}>
+        <div  className={classes.container}>
             <h1>Latest Tutorials</h1>
             <Grid container spacing={40}>
                 {data.map(tutorial =>
-                    <Grid item xs={12} sm={6} md={4} lg={3} >
+                    <Grid key={tutorial.node.uid} item xs={12} sm={6} md={4} lg={3} >
                         <AniLink key={tutorial.node.uid} className="card-link" to={`/post/${tutorial.node.uid}`} cover direction="up" duration={1} bg="#FF5354">
                             <Card className={classes.card}>
                                     <CardMedia
@@ -66,9 +63,9 @@ const tutorialWrapper = ({ data, classes }) => {
     )
 }
 
-tutorialWrapper.PropTypes = {
-    classes: PropTypes.object.isRequired,
-};
+// tutorialWrapper.PropTypes = {
+//     classes: PropTypes.object.isRequired,
+// };
 
 export default withStyles(style)(tutorialWrapper)
 
