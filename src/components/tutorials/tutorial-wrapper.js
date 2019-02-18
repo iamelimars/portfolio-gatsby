@@ -27,6 +27,10 @@ let style = {
     media: {
         height: 140,
     },
+    date: {
+        marginTop: '20px',
+        color: 'grey'
+    }
 
 }
 
@@ -50,6 +54,7 @@ const tutorialWrapper = ({ data, classes }) => {
                                     <CardContent>
                                         <Typography gutterBottom variant="h6" component="h4">{tutorial.node.data.title.text}</Typography>
                                         <Typography component="p">{tutorial.node.data.description}</Typography>
+                                        <Typography className={classes.date} component="p">{tutorial.node.data.date}</Typography>
                                     </CardContent>
                             </Card>
                         </AniLink>
