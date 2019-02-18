@@ -1,5 +1,6 @@
 $break-medium: 800px;
 $break-large: 1200px;
+// 767px
 
 .skills-container {
     background-color: #272E40;
@@ -20,6 +21,7 @@ $break-large: 1200px;
     h1 {
         color: rgba($color: #FFF, $alpha: 0.4);
         text-align: center;
+        font-size: 1.4rem;
     }
     ul {
         list-style-type: none;

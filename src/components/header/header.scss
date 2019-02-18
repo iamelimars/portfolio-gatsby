@@ -4,7 +4,7 @@
 
 .header-container {
     height: 100vh;
-    margin-top: -76px;
+    margin-top: -65px;
 //     position: relative;
 
     .header-left {
@@ -16,7 +16,12 @@
     }
 }
 
-
+@media screen and (max-width: $breakpoint-md) {
+    .header-container {
+        margin-top: -76px;
+    }
+    
+}
 
 .scroll-btn {
     top: 90vh;

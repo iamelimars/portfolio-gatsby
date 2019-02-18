@@ -47,47 +47,90 @@ const worksSection = () => (
                 {data.allPrismicWorks.edges.map((edge, index) =>
                     <div key={index}>
                         {index % 2 === 0 ?
-                            <div className="work-section">
-                                <a href={edge.node.data.link.url} target={edge.node.data.link.target}><img src={edge.node.data.image.url} alt={edge.node.data.title.text} /></a>
-                                <div className="work-info">
-                                    <Fade top cascade delay={600}>
-                                        <h1>{edge.node.data.title.text}</h1>
-                                    </Fade>
-                                    <Fade top cascade delay={400}>
-                                        <ul>
-                                            {edge.node.tags.map((tag, index) =>
-                                                <li key={index}>{tag}</li>
-                                            )}
-                                        </ul>
-                                    </Fade>
-                                    <Fade cascade delay={600}>
-                                        <a className="link work-project" href={edge.node.data.link.url}>Project</a>
-                                        <a className="link work-github" href={edge.node.data.link.url}>Code</a>
-                                    </Fade>
+                            <div>
+                                <div className="work-section hidden-sm">
+                                    <a href={edge.node.data.link.url} target={edge.node.data.link.target}><img src={edge.node.data.image.url} alt={edge.node.data.title.text} /></a>
+                                    <div className="work-info">
+                                        <Fade top cascade delay={600}>
+                                            <h1>{edge.node.data.title.text}</h1>
+                                        </Fade>
+                                        <Fade top cascade delay={400}>
+                                            <ul>
+                                                {edge.node.tags.map((tag, index) =>
+                                                    <li key={index}>{tag}</li>
+                                                )}
+                                            </ul>
+                                        </Fade>
+                                        <Fade cascade delay={600}>
+                                            <a className="link work-project" href={edge.node.data.link.url}>Project</a>
+                                            <a className="link work-github" href={edge.node.data.link.url}>Code</a>
+                                        </Fade>
+                                    </div>
                                 </div>
-
+                                <div className="work-section visible-sm">
+                                    <a href={edge.node.data.link.url} target={edge.node.data.link.target}><img src={edge.node.data.image.url} alt={edge.node.data.title.text} /></a>
+                                    <div className="work-info">
+                                        <Fade top cascade delay={600}>
+                                            <h1>{edge.node.data.title.text}</h1>
+                                        </Fade>
+                                        <Fade top cascade delay={400}>
+                                            <ul>
+                                                {edge.node.tags.map((tag, index) =>
+                                                    <li key={index}>{tag}</li>
+                                                )}
+                                            </ul>
+                                        </Fade>
+                                        <Fade cascade delay={600}>
+                                            <a className="link work-project" href={edge.node.data.link.url}>Project</a>
+                                            <a className="link work-github" href={edge.node.data.link.url}>Code</a>
+                                        </Fade>
+                                    </div>
+                                </div>
                             </div>
+
                             :
-                            <div className="work-section-alt">
-                                <div className="work-info">
-                                    <Fade top cascade delay={600}>
-                                        <h1>{edge.node.data.title.text}</h1>
-                                    </Fade>
-                                    <Fade top cascade delay={400}>
-                                        <ul>
-                                            {edge.node.tags.map((tag, index) =>
-                                                <li key={index}>{tag}</li>
-                                            )}
-                                        </ul>
-                                    </Fade>
-                                    <Fade cascade delay={600}>
-                                        <a className="link work-project" href={edge.node.data.link.url}>Project</a>
-                                        <a className="link work-github" href={edge.node.data.link.url}>Code</a>
-                                    </Fade>
+                            <div>
+                                <div className="work-section-alt hidden-sm">
+                                    <div className="work-info">
+                                        <Fade top cascade delay={600}>
+                                            <h1>{edge.node.data.title.text}</h1>
+                                        </Fade>
+                                        <Fade top cascade delay={400}>
+                                            <ul>
+                                                {edge.node.tags.map((tag, index) =>
+                                                    <li key={index}>{tag}</li>
+                                                )}
+                                            </ul>
+                                        </Fade>
+                                        <Fade cascade delay={600}>
+                                            <a className="link work-project" href={edge.node.data.link.url}>Project</a>
+                                            <a className="link work-github" href={edge.node.data.link.url}>Code</a>
+                                        </Fade>
+                                    </div>
+                                    <a href={edge.node.data.link.url} target={edge.node.data.link.target}><img src={edge.node.data.image.url} alt={edge.node.data.title.text} /></a>
                                 </div>
-                                <a href={edge.node.data.link.url} target={edge.node.data.link.target}><img src={edge.node.data.image.url} alt={edge.node.data.title.text} /></a>
+                                <div className="work-section visible-sm">
+                                    <a href={edge.node.data.link.url} target={edge.node.data.link.target}><img src={edge.node.data.image.url} alt={edge.node.data.title.text} /></a>
+                                    <div className="work-info">
+                                        <Fade top cascade delay={600}>
+                                            <h1>{edge.node.data.title.text}</h1>
+                                        </Fade>
+                                        <Fade top cascade delay={400}>
+                                            <ul>
+                                                {edge.node.tags.map((tag, index) =>
+                                                    <li key={index}>{tag}</li>
+                                                )}
+                                            </ul>
+                                        </Fade>
+                                        <Fade cascade delay={600}>
+                                            <a className="link work-project" href={edge.node.data.link.url}>Project</a>
+                                            <a className="link work-github" href={edge.node.data.link.url}>Code</a>
+                                        </Fade>
+                                    </div>
+                                </div>
 
                             </div>
+
 
                         }
                     </div>
@@ -112,6 +155,6 @@ let styles = {
     headerSpan: {
         color: '#272E40'
     },
-    
+
 
 }

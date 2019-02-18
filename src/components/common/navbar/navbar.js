@@ -88,67 +88,11 @@ class navbar extends Component {
                     </Nav>
                 </Collapse>
             </Navbar>
-            // <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            //     {/* <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand> */}
-            //     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            //     <Navbar.Collapse id="responsive-navbar-nav">
-            //         <Nav className="justify-content-center">
-            //             <Nav.Link href="#deets">More deets</Nav.Link>
-                        
-            //             <AniLink className="nav-link"  cover direction="up" duration={1} to="" bg="#FF5354">
-            //                 Home
-            //             </AniLink>
-            //         </Nav>
-            //     </Navbar.Collapse>
-            // </Navbar>
-
-            // <nav class="navbar">
-            //     <span class="navbar-toggle" id="js-navbar-toggle" onClick={this.menuClicked}>
-            //         {/* <i class="fas fa-bars"></i> */}
-            //         open
-            //     </span>
-            //     <a href="#" class="logo">logo</a>
-            //     <ul class="main-nav" id="js-menu">
-            //         <li>
-            //             <a href="#" class="nav-links">Home</a>
-            //         </li>
-            //         <li>
-            //             <a href="#" class="nav-links">Products</a>
-            //         </li>
-            //         <li>
-            //             <a href="#" class="nav-links">About Us</a>
-            //         </li>
-            //         <li>
-            //             <a href="#" class="nav-links">Contact Us</a>
-            //         </li>
-            //         <li>
-            //             <a href="#" class="nav-links">Blog</a>
-            //         </li>
-            //     </ul>
-            // </nav>
-            // <nav style={topNav} className="top-nav">
-                // <AniLink style={navItem} className="nav-item" cover direction="up" duration={1} to="" bg="#FF5354">
-                //     Home
-                // </AniLink>
-                // <AniLink style={navItem} className="nav-item" cover direction="up" duration={1} to="about" bg="#FF5354">
-                //     About
-                // </AniLink>
-                // <AniLink style={navItem} className="nav-item" cover direction="right" duration={1} to="works" bg="#FF5354">
-                //     Works
-                // </AniLink>
-                // <AniLink style={navItem} className="nav-item" cover direction="left" duration={1} to="blog" bg="#272E40">
-                //     Tutorials
-                // </AniLink>
-                // <AniLink style={navItem} className="nav-item" cover direction="down" duration={1} to="contact" bg="#272E40">
-                //     Contact
-                // </AniLink>
-            // </nav>
+           
         )
     }
 }
 
 export default navbar
 
-{/* <a style={navItem} href="javascript:;" onClick={scrollToAbout} className="nav-item" >
-About
-</a> */}
+

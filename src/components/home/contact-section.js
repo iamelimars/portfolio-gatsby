@@ -13,7 +13,7 @@ const animation = () => {
     tl
         .add({
             targets: '.contact-container',
-            width: '50%',
+            width: '80%',
             opacity: [0, 1],
             easing: 'easeInOutQuart',
             duration: 800,

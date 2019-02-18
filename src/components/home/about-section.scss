@@ -1,0 +1,23 @@
+@import '../../styles/variables.scss';
+
+
+@media screen and (max-width: $breakpoint-md) {
+    .about-image {
+        width: 80% !important;
+    }
+    
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+
+    .about-container {
+        margin: 100px 0px !important;
+    }
+    .about-left-h1 {
+        margin-left: 20px !important;
+    }
+    .about-image {
+        width: 80% !important;
+    }
+    
+}

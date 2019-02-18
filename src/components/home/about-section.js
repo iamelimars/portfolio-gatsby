@@ -1,5 +1,6 @@
 import React from 'react'
 import Radium from 'radium'
+import './about-section.scss'
 import { StaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 import Fade from 'react-reveal/Fade'
@@ -43,8 +44,8 @@ const aboutSection = (props) => {
                 }
             `}
             render={data => (
-                <section style={styles.container}>
-                    <div style={styles.header}>
+                <section className="about-container" style={styles.container}>
+                    <div className="about-header" style={styles.header}>
                         <Fade ssrFadeout ssrFadein top>
                             <h1 style={styles.headerTitle}>About<span style={styles.headerSpan}>.</span></h1>
                         </Fade>
@@ -53,34 +54,34 @@ const aboutSection = (props) => {
                         </Fade>
 
                     </div>
-                    <div style={styles.sectionContainer}>
+                    <div className="about-section" style={styles.sectionContainer}>
                         <Fade ssrFadeout ssrFadein duration={1500} delay={300} top>
                             <h1 style={styles.sectionTitle}>Front End Development<span style={styles.sectionTitleSpan}>.</span> </h1>
                         </Fade>
                         <Fade ssrFadeout ssrFadein duration={1500} delay={400}>
-                            <Img style={styles.sectionImage} fluid={data.devImage.childImageSharp.fluid} />
+                            <Img className="about-image" style={styles.sectionImage} fluid={data.devImage.childImageSharp.fluid} />
                         </Fade>
                         <Fade ssrFadeout ssrFadein duration={1500} top delay={500}>
                             <p style={styles.sectionText}>I am in expert in front end development, with my most proficient language being JavaScript. I am also excellent  in making single page apps with React, Redux, Gatsby & Next.js. My skills are not limited to front end  development, I am also great in PHP Laravel.</p>
                         </Fade>
                     </div>
-                    <div style={styles.sectionContainerLeft}>
+                    <div className="about-section-left" style={styles.sectionContainerLeft}>
                         <Fade ssrFadeout ssrFadein delay={400} duration={1500} >
-                            <Img style={styles.sectionImageLeft} fluid={data.designImage.childImageSharp.fluid} />
+                            <Img className="about-image" style={styles.sectionImageLeft} fluid={data.designImage.childImageSharp.fluid} />
                         </Fade>
                         <Fade ssrFadeout ssrFadein delay={300} duration={1500} top>
-                            <h1 style={styles.sectionTitleLeft}>Design<span style={styles.sectionTitleSpan}>.</span> </h1>
+                            <h1 className="about-left-h1" style={styles.sectionTitleLeft}>Design<span style={styles.sectionTitleSpan}>.</span> </h1>
                         </Fade>
                         <Fade ssrFadeout ssrFadein top delay={500} duration={1500}>
                             <p style={styles.sectionTextLeft}>I do UI/UX design for both mobile and web applications using Sketch, Adobe Photoshop, Adobe XD & Figma. I believe that user experience is the second most important element of a website. A great user experience gets user coming back for more.</p>
                         </Fade>
                     </div>
-                    <div style={styles.sectionContainer}>
+                    <div className="about-section" style={styles.sectionContainer}>
                         <Fade ssrFadeout ssrFadein duration={1500} delay={300} top>
                             <h1 style={styles.sectionTitle}>App Development<span style={styles.sectionTitleSpan}>.</span> </h1>
                         </Fade>
                         <Fade ssrFadeout ssrFadein duration={1500} delay={400}>
-                            <Img style={styles.sectionImage} fluid={data.appImage.childImageSharp.fluid} />
+                            <Img className="about-image" style={styles.sectionImage} fluid={data.appImage.childImageSharp.fluid} />
                         </Fade>
                         <Fade ssrFadeout ssrFadein duration={1500} top delay={500}>
                             <p style={styles.sectionText}>I'm an expert in IOS app development with Objective-C and Swift. I am experienced with multithreading, GCD, API integration, design patterns and much more. I also do Android development and some experience in hybrid app development.</p>
