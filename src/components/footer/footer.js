@@ -10,16 +10,16 @@ import instagram from '../../images/instagram.svg'
 const footer = () => (
     <div style={styles.container}>
         <div style={styles.social}>
-            <a style={styles.socialLink} href="">
+            <a style={styles.socialLink} href="https://www.instagram.com/iamelimarss/">
                 <img width="20px" src={instagram} alt="" />
             </a>
-            <a style={styles.socialLink} href="">
+            <a style={styles.socialLink} href="https://www.linkedin.com/in/elisha-marshall-iii-5446a4131/">
                 <img width="20px" src={linkedin} alt="" />
             </a>
-            <a style={styles.socialLink} href="">
+            <a style={styles.socialLink} href="https://github.com/iamelimars/">
                 <img width="20px" src={github} alt="" />
             </a>
-            <a style={styles.socialLink} href="">
+            <a style={styles.socialLink} href="mailto:elishajmarshall@gmail.com">
                 <img width="25px" src={email} alt="" />
             </a>
         </div>
