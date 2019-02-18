@@ -6,9 +6,7 @@ import TutorialWrapper from '../components/tutorials/tutorial-wrapper'
 export default class BlogList extends Component {
 
     render() {
-        const posts = this.props.data.allPrismicPost.edges
-        console.log(posts);
-        
+        const posts = this.props.data.allPrismicPost.edges        
         const { currentPage, numPages } = this.props.pageContext
         const isFirst = currentPage === 1
         const isLast = currentPage === numPages
@@ -17,10 +15,6 @@ export default class BlogList extends Component {
 
         return (
             <Layout>
-                {/* {posts.map(({node}) => {
-                    const title = node.data.title.text
-                    return <div key={node.uid}>{title}</div>
-                })} */}
                 <TutorialWrapper data={posts} />
                 <div style={styles.pagination}>
                     {!isFirst ? 
@@ -105,7 +99,6 @@ let styles = {
         padding: '10px 35px',
         color: 'white',
         fontWeight: '500',
-        textDecoration: 'none',
         opacity: '0.5'
     }
 }

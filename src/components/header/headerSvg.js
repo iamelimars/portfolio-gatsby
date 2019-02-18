@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './HeaderSvg.scss';
+import './headerSvg.scss';
 
 class HeaderSvg extends Component {
 

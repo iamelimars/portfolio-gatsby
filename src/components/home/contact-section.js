@@ -4,8 +4,6 @@ import anime from 'animejs'
 
 
 const animation = () => {
-    console.log('another test animation');
-
     var tl = anime.timeline({
         easing: 'easeInOutQuart',
     });
