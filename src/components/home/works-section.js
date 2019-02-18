@@ -51,7 +51,7 @@ const worksSection = () => (
                                 <div className="work-section hidden-sm">
                                     <a href={edge.node.data.link.url} target={edge.node.data.link.target}><img src={edge.node.data.image.url} alt={edge.node.data.title.text} /></a>
                                     <div className="work-info">
-                                        <Fade top cascade delay={600}>
+                                        <Fade top  delay={600}>
                                             <h1>{edge.node.data.title.text}</h1>
                                         </Fade>
                                         <Fade top cascade delay={400}>
@@ -61,7 +61,7 @@ const worksSection = () => (
                                                 )}
                                             </ul>
                                         </Fade>
-                                        <Fade cascade delay={600}>
+                                        <Fade delay={600}>
                                             <a className="link work-project" href={edge.node.data.link.url}>Project</a>
                                             <a className="link work-github" href={edge.node.data.link.url}>Code</a>
                                         </Fade>
@@ -70,7 +70,7 @@ const worksSection = () => (
                                 <div className="work-section visible-sm">
                                     <a href={edge.node.data.link.url} target={edge.node.data.link.target}><img src={edge.node.data.image.url} alt={edge.node.data.title.text} /></a>
                                     <div className="work-info">
-                                        <Fade top cascade delay={600}>
+                                        <Fade top delay={600}>
                                             <h1>{edge.node.data.title.text}</h1>
                                         </Fade>
                                         <Fade top cascade delay={400}>
@@ -80,7 +80,7 @@ const worksSection = () => (
                                                 )}
                                             </ul>
                                         </Fade>
-                                        <Fade cascade delay={600}>
+                                        <Fade delay={600}>
                                             <a className="link work-project" href={edge.node.data.link.url}>Project</a>
                                             <a className="link work-github" href={edge.node.data.link.url}>Code</a>
                                         </Fade>
@@ -92,7 +92,7 @@ const worksSection = () => (
                             <div>
                                 <div className="work-section-alt hidden-sm">
                                     <div className="work-info">
-                                        <Fade top cascade delay={600}>
+                                        <Fade top delay={600}>
                                             <h1>{edge.node.data.title.text}</h1>
                                         </Fade>
                                         <Fade top cascade delay={400}>
@@ -102,7 +102,7 @@ const worksSection = () => (
                                                 )}
                                             </ul>
                                         </Fade>
-                                        <Fade cascade delay={600}>
+                                        <Fade  delay={600}>
                                             <a className="link work-project" href={edge.node.data.link.url}>Project</a>
                                             <a className="link work-github" href={edge.node.data.link.url}>Code</a>
                                         </Fade>
@@ -112,7 +112,7 @@ const worksSection = () => (
                                 <div className="work-section visible-sm">
                                     <a href={edge.node.data.link.url} target={edge.node.data.link.target}><img src={edge.node.data.image.url} alt={edge.node.data.title.text} /></a>
                                     <div className="work-info">
-                                        <Fade top cascade delay={600}>
+                                        <Fade top delay={600}>
                                             <h1>{edge.node.data.title.text}</h1>
                                         </Fade>
                                         <Fade top cascade delay={400}>
@@ -122,7 +122,7 @@ const worksSection = () => (
                                                 )}
                                             </ul>
                                         </Fade>
-                                        <Fade cascade delay={600}>
+                                        <Fade  delay={600}>
                                             <a className="link work-project" href={edge.node.data.link.url}>Project</a>
                                             <a className="link work-github" href={edge.node.data.link.url}>Code</a>
                                         </Fade>

@@ -46,12 +46,12 @@ const aboutSection = (props) => {
             render={data => (
                 <section className="about-container" style={styles.container}>
                     <div className="about-header" style={styles.header}>
-                        <Fade ssrFadeout ssrFadein top>
+                        {/* <Fade ssrFadeout ssrFadein top> */}
                             <h1 style={styles.headerTitle}>About<span style={styles.headerSpan}>.</span></h1>
-                        </Fade>
-                        <Fade ssrFadeout ssrFadein top delay={400}>
+                        {/* </Fade> */}
+                        {/* <Fade ssrFadeout ssrFadein top delay={400}> */}
                             <p style={styles.headerContent}>Hi. I design and develop elegant, performant and accessible software</p>
-                        </Fade>
+                        {/* </Fade> */}
 
                     </div>
                     <div className="about-section" style={styles.sectionContainer}>
