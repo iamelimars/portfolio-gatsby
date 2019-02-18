@@ -59,12 +59,12 @@ componentDidMount() {
             easing: 'easeInOutQuart',
             duration: 1000,
         })
-        .add({
-            targets: '.navbar-toggler',
-            opacity: [0, 1],
-            easing: 'easeInOutQuart',
-            duration: 1000
-        }, 500)
+        // .add({
+        //     targets: '.navbar-toggler',
+        //     opacity: [0, 1],
+        //     easing: 'easeInOutQuart',
+        //     duration: 1000
+        // }, 500)
         .add({
             targets: '.scroll-btn',
             opacity: [0, 1],

@@ -55,7 +55,7 @@ class navbar extends Component {
                             </g>
                         </svg>
                     </NavbarBrand>
-                    <HamburgerSpinReverse buttonStyle={{ marginTop: '30px', borderColor: 'transparent !important', opacity: '0' }} buttonWidth={20} barColor="#FF5354" className="navbar-toggler mr-2" isActive={this.state.isOpen} toggleButton={this.toggle} />
+                    <HamburgerSpinReverse buttonStyle={{ marginTop: '30px', borderColor: 'transparent !important' }} buttonWidth={20} barColor="#FF5354" className="navbar-toggler mr-2" isActive={this.state.isOpen} toggleButton={this.toggle} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav navbar>
                             <AniLink style={navItem} className="nav-item" cover direction="up" duration={1} to="" bg="#FF5354">
