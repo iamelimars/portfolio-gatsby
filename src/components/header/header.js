@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 import React, { Component } from 'react'
-import './Header.scss'
+import './header.scss'
 import anime from 'animejs'
 
-import HeaderSvg from './HeaderSvg';
+import HeaderSvg from './headerSvg';
 
 const heroStyle = {
   width: '100%',
