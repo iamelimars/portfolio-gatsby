@@ -52,20 +52,18 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
         }
         description
         date(formatString: "DD.MM.YYYY")
-        ... on data_8 {
-          header_image {
-            localFile {
-              childImageSharp {
-                fluid(maxWidth: 1200, quality: 90) {
-                  ...GatsbyImageSharpFluid_withWebp
-                }
+        
+        header_image {
+          url
+          localFile {
+            childImageSharp {
+              fluid(maxWidth: 1200, quality: 90) {
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
         }
-        header_image {
-            url
-          }
+       
         body {
           ... on PrismicPostBodyText {
             slice_type

@@ -39,6 +39,7 @@ export const blogListQuery = graphql`
         allPrismicPost(
             limit: $limit
             skip: $skip
+            sort: {fields: [data___date], order: DESC}
         ) {
             edges {
                 node {
