@@ -33,7 +33,8 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
   let styles = {
       container: {
           maxWidth: '900px',
-          margin: '100px auto'
+          margin: '100px auto',
+          padding: '20px'
       }
   }
 
