@@ -19,7 +19,7 @@ const Post = ({ data: { prismicPost, posts }, location }) => {
       <Layout >
         <div style={styles.container}>
             <Img fluid={data.header_image.localFile.childImageSharp.fluid} />
-            <h1>{data.title.text}</h1>
+            <h1 style={{margin: '2rem 0'}}>{data.title.text}</h1>
             <h5>{data.date}</h5>
             <SliceZone allSlices={data.body} />
             <DiscussionEmbed shortname={disqusShortname} config={disqusConfig} />
