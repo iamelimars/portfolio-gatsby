@@ -52,15 +52,7 @@ export const blogListQuery = graphql`
                             }
                             html
                         }
-                        categories {
-                            category {
-                              document {
-                                data {
-                                  name
-                                }
-                              }
-                            }
-                          }
+                        
                         description
                         date(formatString: "MM.DD.YYYY")
                         header_image {
